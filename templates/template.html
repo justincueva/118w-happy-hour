@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Hour Schedule</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        h1 { color: #333; }
+        .happy-hour { font-size: 20px; background-color: #f8f8f8; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Today's Happy Hour Specials</h1>
+    <div class="happy-hour">
+        <p><strong>Happy Hour:</strong></p>
+        <p>{{ happy_hour.weekdays }}</p>
+        <p>{{ happy_hour.weekends }}</p>
+    </div>
+</body>
+</html>
