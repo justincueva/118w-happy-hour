@@ -11,6 +11,7 @@ class HappyHourScraper:
     def scrape_page(self):
         options = Options()
         options.add_argument('--headless')
+
         service = Service(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service, options=options)
         page_text = None

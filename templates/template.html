@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Hour Schedule</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-        h1 { color: #333; }
-        .happy-hour { font-size: 20px; background-color: #f8f8f8; padding: 10px; border-radius: 5px; }
-    </style>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <h1>Happy Hour Schedule</h1>
-    <p>{{ happy_hour }}</p>
+    <div class="product-grid">
+        <div class="product-card">
+            <h3>Today's Happy Hour</h3>
+             <p>{{ happy_hour }}</p>
+        </div>
+    </div>
 </body>
 </html>
