@@ -5,7 +5,6 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 class HappyHourScraper:
-
     def __init__(self, url):
         self.url = url
     def scrape_page(self):

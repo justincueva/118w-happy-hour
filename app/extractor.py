@@ -10,7 +10,7 @@ class HappyHourExtractor:
             model="gpt-4",
             messages=[
                 {"role": "system",
-                 "content": "Extract only the Happy Hour schedule and address from the following restaurant webpage text."},
+                 "content": "Extract only the happy hour schedule for the weekdays and no other information. I need the format to be displayed in the days : times."},
                 {"role": "user", "content": page_text}
             ]
         )

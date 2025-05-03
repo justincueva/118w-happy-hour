@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+<h1>Pending Submissions</h1>
+{% if submissions %}
+<table>
+  <thead>
+  <tr>
+    <th>ID</th><th>Name</th><th>URL</th><th>Email</th><th>Submitted At</th><th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for s in submissions %}
+  <tr>
+    <td>{{ s.id }}</td>
+    <td>{{ s.name }}</td>
+    <td><a href="{{ s.url }}" target="_blank">{{ s.url }}</a></td>
+    <td>{{ s.email }}</td>
+    <td>{{ s.submitted_at }}</td>
+    <td>
+      <form action="{{ url_for('approve_submission', submission_id=s.id) }}" method="post" style="display:inline">
+        <button type="submit">Approve</button>
+      </form>
+      <form action="{{ url_for('reject_submission_route', submission_id=s.id) }}" method="post" style="display:inline">
+        <button type="submit">Reject</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No pending submissions.</p>
+{% endif %}
+{% endblock %}

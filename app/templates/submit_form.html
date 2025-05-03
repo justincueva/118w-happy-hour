@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Submit Happy Hour{% endblock %}
+{% block content %}
+<h1>Submit a Happy Hour URL</h1>
+<form method="post">
+  <label>Name of Restaurant:<br/>
+    <input type="text" name="name" required>
+  </label><br/><br/>
+
+  <label>Your Email:<br/>
+    <input type="email" name="email" required>
+  </label><br/><br/>
+
+  <label>Website URL:<br/>
+    <input type="url" name="url" required>
+  </label><br/><br/>
+
+  <label>Comments (optional):<br/>
+    <textarea name="comments" rows="3"></textarea>
+  </label><br/><br/>
+
+  <button type="submit">Submit for Review</button>
+</form>
+{% endblock %}

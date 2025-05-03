@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Restaurants{% endblock %}
+{% block content %}
+<h1>Happy Hour Listings</h1>
+{% if restaurants %}
+<ul>
+  {% for r in restaurants %}
+  <li>
+    <strong>{{ r.name }}</strong> —
+    <a href="{{ r.url }}" target="_blank">Website</a><br/>
+    <em>Weekdays:</em> {{ r.weekdays or 'n/a' }}<br/>
+    <em>Weekends:</em> {{ r.weekends or 'n/a' }}<br/>
+    <small>Last scraped: {{ r.last_scraped }}</small>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No restaurants to display yet.</p>
+{% endif %}
+{% endblock %}

@@ -1,6 +1,7 @@
-from src.app import HappyHourApp
+from app import create_app
 
-if __name__ == '__main__':
-    url = "https://thetablesj.com/happy-hour/"
-    app = HappyHourApp(url)
-    app.run()
+app = create_app()
+
+if __name__ == "__main__":
+    # use debug=True only in development
+    app.run(debug=True, host="0.0.0.0", port=5000)
