@@ -1,0 +1,16 @@
+Flask==2.3.2
+Flask-Login==0.6.3
+Flask-Mail==0.9.1
+requests==2.31.0
+APScheduler==3.10.4         # if you use APScheduler for periodic jobs
+# OR
+Celery==5.5.0               # if you go with Celery instead
+
+SQLAlchemy==2.0.19          # if you prefer an ORM
+# OR
+# just the SQLite driver if you’re using raw sqlite3:
+# nothing extra needed
+
+python-dotenv==1.0.0        # to load environment variables from a .env
+gunicorn==20.1.0            # production WSGI server
+Jinja2==3.1.2               # Flask’s template engine (usually pulled in by Flask)

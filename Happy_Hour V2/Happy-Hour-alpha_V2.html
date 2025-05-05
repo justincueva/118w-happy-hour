@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Hour Scraper</title>
+    <link rel="stylesheet" href="../app/static/product-grid.css">
+</head>
+<body>
+    <header>
+        <p>
+            <a href="./Happy-Hour-alpha.html">Home</a>
+            <a href="./About Us.html" target="_blank">About</a>
+            <a href="./Contact Us.html" target="_blank">Contact</a>
+        </p>
+    </header>
+
+    <section id="search">
+        <h1>The new way to have fun</h1>
+        <img src="shrimp.jpg" width="300" height="300">
+        <p>Discover the best happy hour deals near you. Find exclusive discounts on drinks and appetizers from your favorite local spots, all in one place!</p>
+        <input type="text" placeholder="Search for happy hour spots...">
+    </section>
+
+    <section id="deals">
+        <h2>Local Favorites</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>The Table</h3>
+                <p><strong>Happy Hours:</strong> Wed - Fri: 2:00PM to 5:30PM</p>
+                <p>1110 Willow St, San Jose, CA 95125</p>
+            </div>
+            <div class="product-card">
+                <h3>San Pedro Social</h3>
+                <p><strong>Happy Hours:</strong> Mon - Fri: 3:00PM to 6:00PM</p>
+                <p>163 W Santa Clara St, San Jose, CA 95113</p>
+            </div>
+            <div class="product-card">
+                <h3>PLACEHOLDER CARD</h3>
+                <p><strong>Happy Hours:</strong> Wed - Fri: 2:00PM to 5:30PM</p>
+                <p>1110 Address St, San Jose, CA 95125</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="filter">
+        <label for="filter">Filter by:</label>
+        <select id="filter">
+            <option value="all">All</option>
+            <option value="bars">Bars</option>
+            <option value="restaurants">Restaurants</option>
+        </select>
+    </section>
+
+    <section id="map">
+        <h2>Map</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25379.666827248304!2d-121.91721463810053!3d37.33165601439096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcca3f83c3049%3A0x33f11bbbc2fa2490!2sDowntown%20San%20Jose%2C%20San%20Jose%2C%20CA!5e0!3m2!1sen!2sus!4v1741284319595!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+</body>
+</html>

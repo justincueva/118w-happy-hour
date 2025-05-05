@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}Happy Hour App{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="{{ url_for('home') }}">Home</a> |
+    <a href="{{ url_for('submit_url') }}">Submit URL</a> |
+    <a href="{{ url_for('login') }}">Admin Login</a>
+  </nav>
+  <hr/>
+</header>
+
+<main>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <ul class="flashes">
+    {% for category, msg in messages %}
+    <li class="{{ category }}">{{ msg }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+
+  {% block content %}{% endblock %}
+</main>
+
+<footer>
+  <hr/>
+  <p>&copy; {{ current_year }} Happy Hour App</p>
+</footer>
+</body>
+</html>
