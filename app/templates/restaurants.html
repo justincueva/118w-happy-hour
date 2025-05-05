@@ -2,10 +2,11 @@
 {% block title %}Restaurants{% endblock %}
 {% block content %}
 <h1>Happy Hour Listings</h1>
+
 {% if restaurants %}
-<ul>
+<ul class="product-gird">
   {% for r in restaurants %}
-  <li>
+  <li class="product-card">
     <strong>{{ r.name }}</strong> —
     <a href="{{ r.url }}" target="_blank">Website</a><br/>
     <em>Weekdays:</em> {{ r.weekdays or 'n/a' }}<br/>
