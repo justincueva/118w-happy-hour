@@ -9,9 +9,15 @@
 <body>
 <header>
   <nav>
+          <img
+            src="{{ url_for('static', filename='logo.png') }}"
+            alt="Happy Hour App logo"
+            class="nav-logo"
+          >
+
     <a href="{{ url_for('home') }}">Home</a> |
-    <a href="{{ url_for('submit_url') }}">Submit URL</a> |
-    <a href="{{ url_for('login') }}">Admin Login</a>
+    <a href="{{ url_for('submit_url') }}">Contact Us</a> |
+    <a href="{{ url_for('login') }}">Admin</a>
   </nav>
   <hr/>
 </header>
@@ -32,7 +38,7 @@
 
 <footer>
   <hr/>
-  <p>&copy; {{ current_year }} Happy Hour App</p>
+  <p>&copy; 2025 Tappy Hour</p>
 </footer>
 </body>
 </html>

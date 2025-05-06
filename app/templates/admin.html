@@ -6,17 +6,15 @@
 <table>
   <thead>
   <tr>
-    <th>ID</th><th>Name</th><th>URL</th><th>Email</th><th>Submitted At</th><th>Actions</th>
+    <th>Name</th><th>URL</th><th>Email</th><th>Actions</th>
   </tr>
   </thead>
   <tbody>
   {% for s in submissions %}
   <tr>
-    <td>{{ s.id }}</td>
     <td>{{ s.name }}</td>
     <td><a href="{{ s.url }}" target="_blank">{{ s.url }}</a></td>
     <td>{{ s.email }}</td>
-    <td>{{ s.submitted_at }}</td>
     <td>
       <form action="{{ url_for('approve_submission', submission_id=s.id) }}" method="post" style="display:inline">
         <button type="submit">Approve</button>
